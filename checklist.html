@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>출발 전 준비 체크리스트 · 크로아티아 2026</title>
+<style>
+  :root{
+    --red:#B03A2E; --dark:#2C2C2C; --gray:#5E5E5E; --gold:#9C7A2E;
+    --cream:#FBF6EC; --tan:#F4E9D8; --sight:#2C6E7F; --green:#1E7A46;
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family:'맑은 고딕','Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+    color:var(--dark); line-height:1.7; max-width:900px; margin:0 auto;
+    padding:34px 20px 110px; font-size:17.5px; background:#fff;
+  }
+  a{color:#1155CC}
+
+  header{border-bottom:3px solid var(--tan); padding-bottom:20px}
+  .kicker{color:var(--red); font-weight:800; letter-spacing:.05em; font-size:.82em}
+  h1{font-size:1.75em; margin:8px 0 6px; line-height:1.3}
+  .sub{color:var(--gray); font-size:.92em}
+  .backlink{margin-top:12px; font-size:.9em}
+
+  .dday-row{display:flex; flex-wrap:wrap; gap:10px; margin:20px 0 0}
+  .dday{background:var(--cream); border:1px solid #D9D2C0; border-radius:10px; padding:12px 18px; flex:1 1 160px}
+  .dday .n{color:var(--red); font-weight:800; font-size:1.7em; line-height:1.1}
+  .dday .l{color:var(--gray); font-size:.8em; margin-top:3px}
+  .dday.urgent{background:#FBE9E7; border-color:#E0A79E}
+
+  .decided{background:var(--tan); border-radius:10px; padding:16px 20px; margin:24px 0 0; font-size:.95em}
+  .decided b.h{color:var(--red); display:block; margin-bottom:8px; font-size:1.02em}
+  .decided ul{margin:0; padding-left:22px}
+  .decided li{margin-bottom:5px}
+
+  .bar-wrap{margin:26px 0 10px}
+  .bar{height:14px; background:var(--tan); border-radius:99px; overflow:hidden}
+  .bar>i{display:block; height:100%; width:0; background:var(--red); transition:width .25s}
+  .bar-label{display:flex; justify-content:space-between; font-size:.9em; color:var(--gray); margin-bottom:7px}
+  .bar-label b{color:var(--red); font-size:1.15em}
+
+  .controls{margin:16px 0 6px}
+  .seg{display:inline-flex; border:1px solid #D9D2C0; border-radius:8px; overflow:hidden; margin:0 10px 10px 0}
+  .seg button{
+    font:inherit; font-size:.88em; padding:9px 18px; border:0; background:#fff;
+    color:var(--dark); cursor:pointer; border-right:1px solid #E5DFD0;
+  }
+  .seg button:last-child{border-right:0}
+  .seg button.on{background:var(--red); color:#fff}
+  .btn{
+    font:inherit; font-size:.88em; padding:9px 16px; border-radius:8px; cursor:pointer;
+    border:1px solid #D9D2C0; background:#fff; color:var(--dark); margin:0 8px 10px 0;
+  }
+  .btn:hover{background:var(--cream)}
+  .btn.share{background:var(--green); color:#fff; border-color:var(--green)}
+  #toast{
+    display:none; background:#EAF5EE; border:1px solid #A9CDBA; color:#14532d;
+    border-radius:8px; padding:11px 15px; font-size:.9em; margin:4px 0 14px;
+  }
+
+  section{margin-top:34px}
+  h2.grp{
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    background:linear-gradient(90deg,var(--cream) 0%,rgba(251,246,236,0) 100%);
+    border-left:7px solid var(--red); border-radius:4px;
+    padding:13px 16px; margin:0 0 4px; font-size:1.15em;
+  }
+  h2.grp .when{color:var(--gray); font-size:.7em; font-weight:400}
+  h2.grp .cnt{margin-left:auto; color:var(--gray); font-size:.68em; font-weight:400; white-space:nowrap}
+  .grp-note{color:var(--gray); font-size:.88em; font-style:italic; margin:2px 0 14px 16px}
+
+  ul.check{list-style:none; padding:0; margin:0}
+  ul.check li{
+    display:flex; gap:14px; align-items:flex-start;
+    background:#fff; border:1px solid #E0D9C8; border-left:6px solid var(--red);
+    border-radius:10px; padding:14px 16px; margin-bottom:10px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);
+  }
+  ul.check li.own-dad{border-left-color:var(--sight)}
+  ul.check li.own-both{border-left-color:var(--gold)}
+  ul.check li.hot{border-left-color:#C0392B; background:#FDF4F2}
+  ul.check li.done{background:#F6F6F3 !important; border-left-color:#C3BDAC; opacity:.6}
+  ul.check li.done .t{text-decoration:line-through}
+  ul.check li input{width:24px; height:24px; margin-top:3px; flex:0 0 auto; cursor:pointer; accent-color:var(--red)}
+  .body{flex:1 1 auto; min-width:0}
+  .t{font-weight:700; display:block; cursor:pointer; font-size:1.02em}
+  .d{font-size:.93em; color:#3d3d3d; margin-top:5px}
+  .d a{word-break:break-all}
+
+  .who{
+    display:inline-block; font-size:.75em; font-weight:700; padding:2px 10px;
+    border-radius:99px; margin-right:7px; vertical-align:2px; color:#fff; white-space:nowrap;
+  }
+  .who.me{background:var(--red)}
+  .who.dad{background:var(--sight)}
+  .who.both{background:var(--gold)}
+  .flag{
+    display:inline-block; font-size:.74em; font-weight:700; padding:2px 9px;
+    border-radius:99px; margin-right:6px; vertical-align:2px;
+    background:#7B241C; color:#fff; white-space:nowrap;
+  }
+
+  footer{margin-top:44px; padding-top:20px; border-top:1px solid #E5DFD0; color:var(--gray); font-size:.86em}
+  @media print{
+    .controls,.bar-wrap,#toast,.backlink{display:none}
+    ul.check li{box-shadow:none; break-inside:avoid}
+    body{padding:0; font-size:12pt}
+  }
+  @media (max-width:620px){
+    body{padding:22px 14px 90px; font-size:17px}
+    h2.grp .cnt{margin-left:0; width:100%}
+    .seg button{padding:9px 13px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">CROATIA · MONTENEGRO 2026</div>
+  <h1>출발 전 준비 체크리스트</h1>
+  <div class="sub">2026.10.20(화) 출국 ~ 11.01(일) 귀국 · 두 사람이 함께 보는 목록입니다</div>
+  <div class="backlink">📖 <a href="./index.html">여행 가이드북 전체 보기</a></div>
+  <div class="dday-row">
+    <div class="dday" id="d-depart"><div class="n">—</div><div class="l">출국 (10/20)</div></div>
+    <div class="dday urgent" id="d-esim"><div class="n">—</div><div class="l">eSIM 할인 마감 (8/15)</div></div>
+    <div class="dday" id="d-local"><div class="n">—</div><div class="l">현지 일정 시작 (10/21)</div></div>
+  </div>
+</header>
+
+<div class="decided">
+  <b class="h">이번에 정해진 것 (2026-08-01)</b>
+  <ul>
+    <li><b>운전은 두 사람이 나눠서</b> 합니다 — 두 분 모두 국제운전면허증이 필요하고, 아들은 추가운전자로 등록합니다</li>
+    <li><b>수영은 하지 않습니다</b> — 10월 하순 수온이 19~20도라 체온이 빨리 떨어집니다. 수영 용품 준비도 전부 뺐습니다</li>
+    <li><b>두브로브니크 성벽은 그대로 갑니다</b> — 다만 한 바퀴를 다 돌 필요는 없습니다. 힘들면 민체타 요새까지만 보고 내려옵니다</li>
+    <li><b>스르지산 케이블카는 2일차 늦은 오후</b>에 그대로 둡니다 — 1일차는 도착일이라 통째로 쉽니다</li>
+  </ul>
+</div>
+
+<div class="bar-wrap">
+  <div class="bar-label"><span id="scope-label">전체 진행률</span><span><b id="pct">0%</b> &nbsp;<span id="frac">0 / 0</span></span></div>
+  <div class="bar"><i id="barfill"></i></div>
+</div>
+
+<div class="controls">
+  <div class="seg" id="filter">
+    <button class="on" data-f="all">전체</button>
+    <button data-f="me">아들 담당</button>
+    <button data-f="dad">아버지 담당</button>
+    <button data-f="both">함께</button>
+  </div>
+  <br>
+  <button class="btn share" onclick="shareLink()">🔗 진행 상황 링크 복사</button>
+  <button class="btn" onclick="window.print()">🖨 인쇄 / PDF 저장</button>
+  <button class="btn" onclick="toggleDone(this)">완료 항목 숨기기</button>
+  <button class="btn" onclick="resetAll()">전체 초기화</button>
+</div>
+<div id="toast"></div>
+
+<div id="list"></div>
+
+<footer>
+  <b>체크 상태를 상대방에게 보내려면</b> — 체크를 한 뒤 <b>「진행 상황 링크 복사」</b>를 누르고, 복사된 주소를 카카오톡이나 문자로 보내세요.
+  받은 사람이 그 주소를 열면 <b>같은 체크 상태로 보입니다</b>. (체크 상태는 주소 안에 담겨 있어서, 그냥 새로고침하면 처음으로 돌아갑니다.)<br><br>
+  기준 문서: 크로아티아·몬테네그로 로드트립 가이드북 v3.1 (휴식 중심 개정본)
+</footer>
+
+<script>
+const DATA = [
+{
+  id:"A", title:"지금 당장", when:"8월 첫째 주 안에",
+  note:"마감이 실제로 걸려 있거나, 늦으면 되돌릴 수 없는 것들입니다.",
+  items:[
+    {own:"me", hot:true, flag:"8/15 마감", t:"유럽 eSIM 구매",
+     d:"유심사 체크인유럽 제휴 50% 할인이 <b>2026년 8월 15일</b>까지입니다. <b>지금 사두기만 하면 180일 안에 등록</b>하면 되니 10월 여행에 그대로 씁니다. 8/16부터는 30%로 줄어듭니다. (유럽 42개국·1일 1GB·20일 기준 25,900원 → 12,950원)<br><b>결제 전에 국가 목록에 몬테네그로가 있는지 꼭 확인</b> — 빠져 있으면 코토르 2박 동안 데이터가 안 됩니다.<br><a href='https://www.usimsa.com/partners/checkineu' target='_blank'>usimsa.com/partners/checkineu</a>"},
+    {own:"both", hot:true, flag:"먼저 확인", t:"여권 유효기간 확인 — 각자 본인 여권",
+     d:"여행이 11월 1일에 끝나므로 <b>2027년 5월 1일 이후 만료</b>되어야 안심입니다(권장 6개월). 크로아티아는 솅겐 지역이라 <b>여권 발급일이 2016년 10월 21일 이후</b>여야 한다는 조건도 붙습니다.<br>둘 중 하나라도 걸리면 재발급에 2~3주가 걸리니, <b>오늘 여권을 꺼내 만료일과 발급일을 확인</b>해 주세요."},
+    {own:"me", hot:true, t:"국제운전면허증 발급 — 아들",
+     d:"운전을 분담하기로 했으니 <b>필수</b>입니다. <b>국내 운전면허증과 반드시 같이 들고 다녀야</b> 효력이 있습니다(국제면허증만으로는 무효).<br>· <b>방문 발급</b> — 운전면허시험장이나 경찰서에서 여권용 사진 1매 + 신분증으로 <b>당일 즉시</b> 받습니다. 확실한 쪽입니다.<br>· 온라인 — <a href='https://www.safedriving.or.kr' target='_blank'>safedriving.or.kr</a> (PC 전용, 등기로 받기까지 1~2주, 하루 접수 인원 제한 있음)"},
+    {own:"dad", hot:true, t:"국제운전면허증 발급 — 아버지",
+     d:"<b>국제운전면허증은 발급일로부터 1년만 유효</b>합니다. 예전에 받아두신 게 있어도 <b>지금 유효기간을 확인</b>해 주세요 — 만료됐으면 다시 발급받아야 합니다. 지금 발급하면 여행 기간을 여유 있게 덮습니다.<br>가장 쉬운 방법은 <b>가까운 운전면허시험장이나 경찰서 방문</b>입니다. 여권용 사진 1장과 신분증(운전면허증)만 가져가시면 그 자리에서 받으실 수 있습니다.<br><b>여행 갈 때 국내 운전면허증도 꼭 같이</b> 챙기셔야 합니다 — 둘 중 하나만 있으면 현지에서 운전할 수 없습니다."},
+    {own:"me", hot:true, t:"Uni Rent 렌터카 예약 확정 — 4가지 한 번에 확인",
+     d:"① <b>아들(만 22세) 추가운전자 등록</b> — 약관상 A~E등급(중형 SUV 포함)까지 가능, F등급 이상은 25세부터. 예약할 차가 A~E인지 확인.<br>② <b>영 드라이버 할증</b> 해당 여부와 금액.<br>③ <b>그린카드(국경통과 허가서)에 몬테네그로 포함</b> — 서면으로 받아둘 것.<br>④ <b>두 지점 실제 영업시간</b> — 4일차 아침 08:00 픽업(두브로브니크 Hotel Vis), 9일차 반납 마감(자그레브 Kranjčevićeva 46). 반납 마감 시각에서 거꾸로 9일차 아침 출발 시간을 정합니다.<br><a href='https://www.uni-rent.net/' target='_blank'>uni-rent.net</a> · <a href='https://www.uni-rent.net/faq/' target='_blank'>FAQ</a>"}
+  ]
+},
+{
+  id:"B", title:"8월 중", when:"8월 안에",
+  note:"예매·가입처럼 자리를 먼저 잡아둬야 하는 것들.",
+  items:[
+    {own:"both", t:"여행자보험 가입 — 두 사람 모두",
+     d:"보험다모아(보험개발원이 운영하는 공식 비교 사이트)에서 한 번에 비교할 수 있습니다. 렌터카 관련 보장과 의료비 한도를 함께 보세요.<br><a href='https://www.e-insmarket.or.kr/tripIns/tripInsList.knia?prdtSmlClsCd=H001' target='_blank'>보험다모아 여행자보험 비교</a>"},
+    {own:"me", t:"터키항공 APIS(여권정보) 입력 + 앱 등록",
+     d:"아들 APIS가 아직 입력되지 않았습니다. 앱에 예약번호(PNR TFIQSL)를 등록해두면 이후 온라인 체크인과 지연 알림을 한곳에서 받습니다."},
+    {own:"me", t:"플리트비체 국립공원 입장권 예매 — 10/29",
+     d:"들어가는 <b>시간대를 지정해서 사는 방식</b>이라 미리 사야 합니다. <b>입구 1(Entrance 1)</b>을 고르고, 코스는 <b>공식 A코스</b>(하부 호수 · 약 3.5km · 2~3시간 · 큰 폭포 포함) 기준으로 잡습니다.<br>출발 시각은 렌터카 반납 마감 시각에서 거꾸로 계산해 정합니다.<br><a href='https://ticketing.np-plitvicka-jezera.hr' target='_blank'>공식 예매 사이트</a>"},
+    {own:"me", t:"Dubrovnik Pass 3일권 구매 (€50)",
+     d:"성벽 · 포트 로브리예나크 · 박물관 약 10곳 · 시내버스가 포함됩니다. <b>스르지산 케이블카는 포함 안 됨</b>(왕복 €30 따로). 처음 쓴 순간부터 72시간이라 1일차 오후에 열면 4일차 오후까지 유효합니다.<br><a href='https://www.dubrovnikpass.com/' target='_blank'>dubrovnikpass.com</a>"},
+    {own:"me", t:"확인 전화·메일 3건",
+     d:"① <b>스톤 Konoba Bakus 겨울휴무</b> — +385 20 754 270 (6일차 점심이 여기 걸려 있음)<br>② <b>플리트비체 보트·파노라마 열차 10/29 운행 여부</b> — +385 53 751 015 / info@np-plitvicka-jezera.hr (11월 1일부터 줄어드는 게 보통이라 경계선)<br>③ <b>로크룸 페리 10월 말 운항 여부</b> — 안 되면 렉터 궁전 + 도미니크회 수도원으로 대체"}
+  ]
+},
+{
+  id:"C", title:"9월", when:"9월 중",
+  note:"카드·앱·짐처럼 손에 익혀둬야 하는 것들.",
+  items:[
+    {own:"dad", t:"카드 준비 — 아버지",
+     d:"① 하나카드 트래블로그에 <b>유로 충전</b>('하나머니' 앱에서 환전·충전)<br>② 롯데카드 해외 이용 한도 확인<br>③ <b>해외결제용 비밀번호(4자리)를 한국에서 미리 설정</b> — 유럽은 서명이 아니라 카드 비밀번호를 누르는 방식이라, 비밀번호를 모르면 결제가 안 됩니다. 이게 현지에서 가장 자주 당황하는 부분입니다."},
+    {own:"me", t:"카드 준비 — 아들 + 현금",
+     d:"본인 카드도 해외결제 비밀번호(4자리)를 미리 설정. 그리고 <b>유로 소액권·동전</b>을 여유 있게 준비하세요 — 스톤 같은 작은 마을 식당은 현금만 받는 곳이 있습니다."},
+    {own:"me", t:"앱 설치·가입·충전 — 아들 휴대폰",
+     d:"<b>Google Maps</b>(크로아티아·몬테네그로 오프라인 지도) · <b>Uber</b>(결제카드 등록까지) · <b>Airbnb</b>(예약 3건·호스트 연락) · <b>Moj ZET</b>(자그레브 트램, 최소 €1 충전 — 기사에게 직접 사면 더 비쌈) · <b>Libertas Dubrovnik</b>(4번 버스) · <b>Bounce</b>(짐보관 예비)"},
+    {own:"dad", t:"앱 설치 — 아버지 휴대폰 (아들이 도와드리기)",
+     d:"많이 필요하지 않습니다. <b>터키항공</b>(항공권·체크인), <b>Google Maps</b>(오프라인 지도 저장), <b>Airbnb</b>(숙소 정보), <b>카카오톡 로밍 확인</b> 정도면 충분합니다. 나머지 티켓·결제 앱은 아들 휴대폰으로 처리합니다."},
+    {own:"me", t:"숙소 주차 확인 — 코토르 · 스플리트 · 자다르",
+     d:"세 곳 모두 구시가에 차가 못 들어갑니다. 특히 <b>스플리트 2박</b>이 관건이고, 주차가 안 되면 Sukoišanska·Koteks 주차장을 써야 합니다. 자그레브는 확인 완료(짐 보관 가능, 주차 시간당 €1.60)."},
+    {own:"both", t:"짐 목록 정리 — 수영 용품은 빼고",
+     d:"<b>옷</b> — 얇은 옷을 겹쳐 입는 구성 + 바람막이·방수 재킷, <b>목도리·장갑</b>(아침저녁 5~10도까지 내려감), <b>쿠션 좋은 방수 신발</b>(구시가 돌바닥이 비 오면 많이 미끄럽습니다), 가벼운 우산.<br><b>아들 추가</b> — 보조배터리, <b>차량용 휴대폰 거치대</b>(내비 담당), 충전 케이블, 유럽 어댑터(C/F형 — 한국 플러그가 대개 그대로 꽂힙니다).<br><b>수영복 · 아쿠아슈즈 · 방수팩은 준비하지 않습니다</b> — 수영을 안 하기로 했습니다."}
+  ]
+},
+{
+  id:"D", title:"10월 초", when:"출발 3주 전 ~ 3일 전",
+  note:"실물과 정보를 손에 쥐는 단계입니다.",
+  items:[
+    {own:"me", t:"서류 인쇄본 한 세트",
+     d:"항공 e-티켓 · 여행자보험 증서 · 렌터카 예약 바우처 · 숙소 바우처 3건 · 플리트비체 입장권 · Dubrovnik Pass. 휴대폰 배터리가 나가는 상황을 생각해 <b>종이로 한 부</b> 챙깁니다."},
+    {own:"me", t:"비상연락처 저장 — 두 사람 휴대폰 모두",
+     d:"<b>112</b>(유럽 공통 긴급전화, 영어 통합니다) · 외교부 영사콜센터와 주크로아티아 대한민국대사관(몬테네그로도 관할, <a href='https://www.0404.go.kr/' target='_blank'>0404.go.kr</a>) · <b>Uni Rent 긴급출동 번호</b>(픽업할 때 계약서에서 확인) · 숙소 호스트 3곳."},
+    {own:"dad", t:"복용약 준비 — 아버지",
+     d:"<b>평소 드시는 약을 여행 기간보다 넉넉하게</b> 챙기시고, <b>영문 처방전이나 약 봉투를 함께</b> 넣어주세요 — 공항 검색대나 현지 약국에서 설명하기가 훨씬 편합니다. 캐리어가 아니라 <b>기내 가방</b>에 넣으시는 게 안전합니다(위탁수하물이 지연될 수 있습니다)."},
+    {own:"both", t:"상비약 · 전기장판",
+     d:"해열진통제 · 소화제 · 밴드 · <b>멀미약</b>(로브첸 산길은 헤어핀 커브가 이어집니다) · 파스 · 압박붕대.<br><b>휴대용 전기장판</b>도 하나 권합니다 — 에어비앤비는 숙소마다 난방 편차가 크고 밤 기온이 5~10도까지 내려갑니다. 유럽 전압이 한국과 거의 같아 그대로 작동합니다."},
+    {own:"me", t:"eSIM 등록 · 개통 날짜 설정",
+     d:"사둔 eSIM을 휴대폰에 등록하고 개통 시작일을 10월 21일로 맞춥니다. 등록만 미리 해두고 개통은 현지 도착 후로 미룰 수 있는지 판매처 안내를 확인하세요."},
+    {own:"me", t:"오프라인 지도 다운로드 — 두 사람 휴대폰 모두",
+     d:"Google Maps에서 크로아티아 전 구간과 몬테네그로 코토르만 일대를 미리 받아둡니다. 국경 구간과 로브첸 산길은 데이터가 끊기기 쉽습니다."}
+  ]
+},
+{
+  id:"E", title:"출발 1~2일 전", when:"10/18 ~ 10/19",
+  note:"",
+  items:[
+    {own:"me", t:"터키항공 온라인 체크인 (두 사람)", d:"좌석까지 함께 지정합니다."},
+    {own:"me", t:"렌터카 예약 최종 재확인", d:"픽업·반납 지점과 시간, 그리고 <b>추가운전자 등록이 실제로 들어가 있는지</b> 다시 확인."},
+    {own:"me", t:"Uni Rent 두 지점 위치를 지도 앱에 저장",
+     d:"두브로브니크 Hotel Vis(Masarykov put 2, 라파드) · 자그레브 Kranjčevićeva 46."},
+    {own:"both", hot:true, t:"국제운전면허증 + 국내 운전면허증 — 두 사람 모두, 둘 다",
+     d:"<b>이게 이번 여행에서 가장 흔한 실수입니다.</b> 국제운전면허증만 들고 가면 현지에서 운전할 수 없습니다. 두 분 다 <b>국내 면허증과 국제 면허증을 한 세트로</b> 여권과 같은 파우치에 넣어두세요."},
+    {own:"both", t:"수하물 무게 확인", d:"위탁수하물은 1인 1개, 23kg 기준입니다."}
+  ]
+},
+{
+  id:"F", title:"현지에서의 역할", when:"10/21 ~ 10/31",
+  note:"준비물이 아니라 운영 약속입니다. 출발 전에 두 분이 한 번 같이 읽어두세요.",
+  items:[
+    {own:"me", t:"매일 아침 — 오늘의 메인 2곳과 날씨만 확인",
+     d:"일정표에 시간이 안 적혀 있는 건 일부러 그렇게 한 것입니다. 아침에 <b>오늘 갈 곳이 몇 군데인지</b>와 날씨만 보고 순서를 정합니다. 날씨에 걸린 판단 둘: <b>5일차 로브첸</b>(안개 끼면 생략, 해 지기 전에 내려오기 — 10/25부터 일몰 16:50) · <b>3일차 로크룸 페리</b>(바람 세면 결항)."},
+    {own:"both", hot:true, t:"운전 분담 — 6일차와 9일차는 반드시 나눠서",
+     d:"<b>6일차</b> 코토르 → 스톤 → 스플리트는 순수 운전만 5~5.5시간입니다(국경 통과 포함). 08:00 출발 권장.<br><b>9일차</b> 자다르 → 플리트비체 1시간 30분 + 플리트비체 → 자그레브 2시간 30분~3시간.<br>이 두 날은 <b>중간에 운전대를 바꿉니다.</b> 그리고 2시간마다 휴게소에 내려 5~10분 걷습니다 — 앉아 있는 시간이 길수록 다리가 더 피로해집니다. 로브첸 산길은 헤어핀이 이어지니 서행."},
+    {own:"me", t:"주차와 내비게이션은 아들이",
+     d:"코토르 · 스플리트 · 자다르 · 트로기르 모두 구시가에 차가 못 들어갑니다. 도착 전에 주차장을 미리 찍어둡니다. 트로기르는 다리 건너 육지 쪽, 자다르는 반도 밖, 플리트비체는 입구 1 주차장(입장권에 포함 안 됨, 별도 요금)."},
+    {own:"me", t:"티켓 구매와 앱 결제는 아들이",
+     d:"자그레브 트램(Moj ZET), 로크룸 페리, 스르지산 케이블카, 페라스트 보트(€5, 현금). 카드가 안 되는 작은 가게가 있으니 유로 소액권을 늘 지니고 다닙니다."},
+    {own:"me", t:"짐 운반 — 계단·언덕 구간",
+     d:"코토르와 자다르는 구시가까지 짐을 들고 걸어 들어가야 할 수 있습니다. 9일차 자그레브는 체크인하고 짐만 내린 뒤 바로 렌터카를 반납하는 동선입니다."},
+    {own:"both", hot:true, t:"덜어내기 — 이번 여행에서 가장 중요한 약속",
+     d:"<b>이 여행의 목적은 관광이 아니라 휴식입니다.</b> 성벽과 플리트비체는 <b>끝까지 안 돌아도 되는 일정</b>으로 잡아두었습니다.<br>아버지는 힘드시면 <b>참지 마시고 말씀해 주세요.</b> 아들은 아버지가 말씀하시기 전에 <b>먼저 \"여기까지만 보고 내려가자\"</b>고 말하는 게 역할입니다.<br>회색으로 표시된 선택 항목(파샤차 전망대 · 프리모슈텐 · 바치비체)은 <b>기본은 생략</b>이고, 컨디션이 확실히 좋을 때만 더합니다. 7일차 트로기르는 가장 먼저 빼도 되는 일정입니다."},
+    {own:"me", t:"사고·도난이 났을 때",
+     d:"안전조끼와 삼각대는 트렁크 깊숙이 넣지 말고 손 닿는 곳에. 사고가 나면 유럽 공통 사고확인서(European Accident Statement)로 상대와 정보를 교환합니다. <b>도난·사고는 현지 경찰서에서 경찰신고확인서(Police Report)를 반드시 받아야</b> 보험 청구가 됩니다. 병원에 갔다면 진단서와 영수증 원본을, 수하물을 잃어버렸다면 항공사 PIR 확인서를 챙깁니다."}
+  ]
+}
+];
+
+const WHO = {me:{c:"me",l:"아들"}, dad:{c:"dad",l:"아버지"}, both:{c:"both",l:"함께"}};
+let filter="all", hideDone=false, ORDER=[];
+
+function render(){
+  const wrap=document.getElementById('list'); wrap.innerHTML=''; ORDER=[];
+  DATA.forEach(g=>{
+    const sec=document.createElement('section');
+    sec.dataset.grp=g.id;
+    sec.innerHTML='<h2 class="grp">'+g.title+' <span class="when">'+g.when+'</span>'+
+      '<span class="cnt" id="cnt-'+g.id+'"></span></h2>'+
+      (g.note?'<div class="grp-note">'+g.note+'</div>':'');
+    const ul=document.createElement('ul'); ul.className='check';
+    g.items.forEach((it,i)=>{
+      const key=g.id+i; ORDER.push(key);
+      const li=document.createElement('li');
+      li.className='own-'+it.own+(it.hot?' hot':'');
+      li.dataset.grp=g.id; li.dataset.own=it.own; li.dataset.key=key;
+      const w=WHO[it.own];
+      const flag=it.flag?'<span class="flag">'+it.flag+'</span>':'';
+      li.innerHTML='<input type="checkbox" id="cb-'+key+'">'+
+        '<div class="body"><label class="t" for="cb-'+key+'">'+
+        '<span class="who '+w.c+'">'+w.l+'</span>'+flag+it.t+'</label>'+
+        (it.d?'<div class="d">'+it.d+'</div>':'')+'</div>';
+      li.querySelector('input').addEventListener('change',e=>{
+        li.classList.toggle('done',e.target.checked); update();
+      });
+      ul.appendChild(li);
+    });
+    sec.appendChild(ul); wrap.appendChild(sec);
+  });
+}
+
+function visible(li){
+  if(filter!=="all" && li.dataset.own!==filter) return false;
+  if(hideDone && li.classList.contains('done')) return false;
+  return true;
+}
+function applyView(){
+  document.querySelectorAll('ul.check li').forEach(li=>{
+    li.style.display = visible(li) ? 'flex':'none';
+  });
+  document.querySelectorAll('#list section').forEach(s=>{
+    const any=[...s.querySelectorAll('li')].some(li=>li.style.display!=='none');
+    s.style.display = any ? '':'none';
+  });
+}
+function update(){
+  const pool=[...document.querySelectorAll('ul.check li')]
+    .filter(li=> filter==="all" || li.dataset.own===filter);
+  const done=pool.filter(li=>li.classList.contains('done')).length;
+  const pct=pool.length?Math.round(done/pool.length*100):0;
+  document.getElementById('pct').textContent=pct+'%';
+  document.getElementById('frac').textContent=done+' / '+pool.length;
+  document.getElementById('barfill').style.width=pct+'%';
+  document.getElementById('scope-label').textContent =
+    filter==="all"?"전체 진행률":(filter==="me"?"아들 담당 진행률":(filter==="dad"?"아버지 담당 진행률":"함께 할 일 진행률"));
+  DATA.forEach(g=>{
+    const items=[...document.querySelectorAll('li[data-grp="'+g.id+'"]')]
+      .filter(li=> filter==="all" || li.dataset.own===filter);
+    const d=items.filter(li=>li.classList.contains('done')).length;
+    const el=document.getElementById('cnt-'+g.id);
+    if(el) el.textContent= items.length? (d+' / '+items.length+' 완료') : '';
+  });
+  applyView();
+}
+
+document.getElementById('filter').addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  [...e.currentTarget.children].forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); filter=b.dataset.f; update();
+});
+function toggleDone(btn){
+  hideDone=!hideDone;
+  btn.textContent = hideDone?'완료 항목 보이기':'완료 항목 숨기기';
+  applyView();
+}
+function resetAll(){
+  document.querySelectorAll('ul.check input').forEach(x=>{
+    x.checked=false; x.closest('li').classList.remove('done');
+  });
+  history.replaceState(null,'',location.pathname+location.search);
+  update();
+}
+
+/* ---- 체크 상태를 주소(#)에 담아 공유 ---- */
+function encodeState(){
+  let bits='';
+  ORDER.forEach(k=>{ bits += document.getElementById('cb-'+k).checked?'1':'0'; });
+  while(bits.length%4) bits+='0';
+  let hex='';
+  for(let i=0;i<bits.length;i+=4) hex+=parseInt(bits.substr(i,4),2).toString(16);
+  return hex;
+}
+function decodeState(hex){
+  let bits='';
+  for(const c of hex){ bits += parseInt(c,16).toString(2).padStart(4,'0'); }
+  ORDER.forEach((k,i)=>{
+    if(bits[i]==='1'){
+      const cb=document.getElementById('cb-'+k);
+      cb.checked=true; cb.closest('li').classList.add('done');
+    }
+  });
+}
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.innerHTML=msg; t.style.display='block';
+  clearTimeout(toast._t); toast._t=setTimeout(()=>{t.style.display='none';},9000);
+}
+function shareLink(){
+  const url=location.origin+location.pathname+location.search+'#s='+encodeState();
+  history.replaceState(null,'','#s='+encodeState());
+  const done=()=>toast('✅ 링크를 복사했습니다. 카카오톡이나 문자로 붙여넣어 보내세요 — 받는 분 화면에도 지금 체크 상태 그대로 보입니다.');
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(url).then(done).catch(()=>manual(url));
+  } else manual(url);
+  function manual(u){
+    toast('아래 주소를 길게 눌러 복사한 뒤 보내주세요.<br><br><b style="word-break:break-all">'+u+'</b>');
+  }
+}
+
+function ddays(){
+  const today=new Date(); today.setHours(0,0,0,0);
+  [['d-depart','2026-10-20'],['d-esim','2026-08-15'],['d-local','2026-10-21']].forEach(([id,ds])=>{
+    const n=Math.round((new Date(ds+'T00:00:00')-today)/86400000);
+    document.querySelector('#'+id+' .n').textContent = n>0?('D-'+n):(n===0?'D-DAY':('D+'+(-n)));
+  });
+}
+
+render();
+if(location.hash.startsWith('#s=')) decodeState(location.hash.slice(3));
+update();
+ddays();
+</script>
+</body>
+</html>
